@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+	
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>/WEB-INF/spring/root-context.xml</param-value>
+  </context-param>
+  <context-param>
+    <param-name>salesEmail</param-name>
+    <param-value>sales@rtakacs.eu</param-value>
+  </context-param>
+  <context-param>
+    <param-name>lionBreed</param-name>
+    <param-value>White Lion</param-value>
+  </context-param>
+  <context-param>
+    <param-name>geckoSpecie</param-name>
+    <param-value>Gold dust day gecko</param-value>
+  </context-param>
+  
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstServletContextListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstServletContextAttributeListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstHttpSessionListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstServletRequestListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstServletRequestAttributeListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstHttpSessionAttributeListener</listener-class>
+  </listener>
+  <listener>
+    <listener-class>eu.rtakacs.servlet.listener.FirstHttpSessionActivationListener</listener-class>
+  </listener>
+  
+  <servlet>
+    <servlet-name>initParamServletSpring</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>/WEB-INF/spring/appServlet/servlet-context.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>email</param-name>
+      <param-value>info@rtakacs.eu</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initParamServletSpring</servlet-name>
+    <url-pattern>/initParamSpring</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>initParamServlet</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.InitParamServlet</servlet-class>
+    <init-param>
+      <param-name>contactEmail</param-name>
+      <param-value>contact@rtakacs.eu</param-value>
+    </init-param>
+    <init-param>
+      <param-name>infoEmail</param-name>
+      <param-value>info@rtakacs.eu</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>initParamServlet</servlet-name>
+    <url-pattern>/initParam</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>STMServlet</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.SingleThreadModelServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>STMServlet</servlet-name>
+    <url-pattern>/STMServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RDServlet</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.RequestDispatcherServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RDServlet</servlet-name>
+    <url-pattern>/RDServlet</url-pattern>
+  </servlet-mapping>
+ 
+  <servlet>
+    <servlet-name>ReceiverServlet</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.ReceiverServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReceiverServlet</servlet-name>
+    <url-pattern>/receiverServlet</url-pattern>
+  </servlet-mapping>
+
+  
+</web-app>
