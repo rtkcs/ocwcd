@@ -6,12 +6,23 @@
 <title>JSP Counter</title>
 </head>
 <body>
+<%!
+
+int counter(){
+	return ++countInFunction;
+}
+int countInFunction = 0;
+
+%>
+
+
 <h1>JSP Page with own Variables</h1>
 
 <%! int count=0; %><%-- declaration --%>
 <%  int badCounter=0; %><%--scriptlet --%>
-This page is viewed <%=++count %> times.<br />
-This page is viewed <%=++badCounter %> times (bad counter).<br />
+This page is viewed <%= ++count %> times.<br />
+This page is viewed <%= ++badCounter %> times (bad counter).<br />
+This page is viewed <%= counter() %> times (function call counter()).<br />
 
 </body>
 </html>
