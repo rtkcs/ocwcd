@@ -10,5 +10,17 @@
 
 <h1>JSP Page with Implicit Objects</h1>
 
+<ul>
+	<li>JspWriter 				out</li>
+	<li>HttpServletRequest		request</li>
+	<li>HttpServletResponse		response</li>
+	<li>HttpSession				session</li>
+	<li>ServletContext			application</li>
+	<li>ServletConfig			config</li>
+	<li>Throwable				exception</li>
+	<li>PageContext				pageContext</li>
+	<li>Object					page</li>
+</ul>
+
 </body>
 </html>
