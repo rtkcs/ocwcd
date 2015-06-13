@@ -33,5 +33,18 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/spring</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>implicitObjects</servlet-name>
+		<jsp-file>/implicitObjects.jsp</jsp-file>
+		<init-param>
+			<param-name>email</param-name>
+			<param-value>name@domain.com</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>implicitObjects</servlet-name>
+		<url-pattern>/implicitObjects.jsp</url-pattern>
+	</servlet-mapping>
 
 </web-app>
