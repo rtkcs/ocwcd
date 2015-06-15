@@ -7,18 +7,35 @@
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
-	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
+	<!-- The definition of the Root Spring Container shared by all Servlets and Filters --> 
+	
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>/WEB-INF/spring/root-context.xml</param-value>
 	</context-param>
 	
-	<!-- Creates the Spring Container shared by all Servlets and Filters -->
+	
+	<!-- Creates the Spring Container shared by all Servlets and Filters --> 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
+	
+	
+	<jsp-config>
+		<!-- Set to true to disable JSP scripting syntax -->
+		<jsp-property-group>
+			<url-pattern>/scripting-invalid/scripting.jsp</url-pattern>
+			<scripting-invalid>false</scripting-invalid>
+		</jsp-property-group>
+		<!-- Set to true to disable Expression Language (EL) syntax -->
+		<jsp-property-group>
+			<url-pattern>/scripting-invalid/scripting.jsp</url-pattern>
+			<el-ignored>true</el-ignored>
+		</jsp-property-group>
+	</jsp-config>
+	
 
-	<!-- Processes application requests -->
+	<!-- Processes application requests	--> 
 	<servlet>
 		<servlet-name>appServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -33,6 +50,7 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/spring</url-pattern>
 	</servlet-mapping>
+
 	
 	<servlet>
 		<servlet-name>implicitObjects</servlet-name>
