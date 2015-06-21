@@ -50,8 +50,20 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/spring</url-pattern>
 	</servlet-mapping>
-
 	
+	<!-- standardActions servlet -->
+	<servlet>
+		<servlet-name>standardActions</servlet-name>
+		<servlet-class>eu.rtakacs.jsp.StandardActionsController</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>standardActions</servlet-name>
+		<url-pattern>/standard</url-pattern>
+	</servlet-mapping>	
+
+	<!-- init parameters for jsp page -->
 	<servlet>
 		<servlet-name>implicitObjects</servlet-name>
 		<jsp-file>/implicitObjects.jsp</jsp-file>
