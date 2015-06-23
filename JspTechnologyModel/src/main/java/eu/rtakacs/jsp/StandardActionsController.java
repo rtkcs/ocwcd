@@ -9,13 +9,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Controller;
 
 import eu.rtakacs.jsp.domain.Pet;
 import eu.rtakacs.jsp.domain.PetType;
 
 
-@Controller
+
 public class StandardActionsController extends HttpServlet{
 	
 	private static final Logger logger = LoggerFactory.getLogger(StandardActionsController.class);

@@ -76,5 +76,18 @@
 		<servlet-name>implicitObjects</servlet-name>
 		<url-pattern>/implicitObjects.jsp</url-pattern>
 	</servlet-mapping>
+	
+	<!-- ELController servlet -->
+	<servlet>
+		<servlet-name>ELController</servlet-name>
+		<servlet-class>eu.rtakacs.jsp.ELController</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+		
+	<servlet-mapping>
+		<servlet-name>ELController</servlet-name>
+		<url-pattern>/ELBasics</url-pattern>
+	</servlet-mapping>	
+	
 
 </web-app>
