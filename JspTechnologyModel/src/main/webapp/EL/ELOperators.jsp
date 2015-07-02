@@ -57,6 +57,47 @@
 			<li>1 >= 1 = ${1 >= 1}</li>
 			<li>1 ge 1 = ${1 ge 1}</li>
 		</ul>		
+		
+		<h2>Excercise</h2>
+<%
+String num = "2";
+request.setAttribute("num", num);
+Integer i = new Integer(3);
+request.setAttribute("integer", i);
+java.util.ArrayList list = new java.util.ArrayList();
+list.add("true");
+list.add("false");
+list.add("2");
+list.add("10");
+request.setAttribute("list", list);
+
+%>
+
+String num = "2";<br>
+request.setAttribute("num", num);<br>
+Integer i = new Integer(3);<br>
+request.setAttribute("integer", i);<br>
+java.util.ArrayList list = new java.util.ArrayList();<br>
+list.add("true");<br>
+list.add("false");<br>
+list.add("2");<br>
+list.add("10");<br>
+request.setAttribute("list", list);<br><br><br>
+
+<ul>
+	<li>num > 3 = ${num > 3}</li>
+	<li>integer le 12 = ${integer le 12}</li>
+	<li>requestScope["integer"] ne 4 and 6 le num || false = ${requestScope["integer"] ne 4 and 6 le num || false}</li>
+	<li>list[0] || list["1"] and true = ${list[0] || list["1"] and true}</li>
+	<li>num > integer = ${num > integer}</li>
+	<li>num == integer - 1 = ${num == integer - 1}</li>
+	<li>42 div 0 = ${42 div 0}</li>
+<%--	
+	<li>${}</li>
+	<li>${}</li>
+	<li>${}</li>
+		 --%>
+</ul>
 	
 	
 	</body>
