@@ -11,7 +11,7 @@
 <P>  The time on the server is ${serverTime}. </P>
 <br />
 <ul>
-	<li>This page was viewed <% out.print(PageViewCounter.getCount()); %> --scpriptlet code  <b><\% out.print(PageViewCounter.getCount()); %></b></li>
+	<li>This page was viewed <% out.print(PageViewCounter.getCount()); %> --scpriptlet code  <b><\% out.print(PageViewCounter.getCount()); %\></b></li>
 	<li>This page was viewed <%=PageViewCounter.getCount() %> --expression code, <b><\%=PageViewCounter.getCount() %></b> --argument to out.print()</li>
 </ul>
 <br />
