@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+<web-app 
+	version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
@@ -88,6 +90,26 @@
 		<servlet-name>ELController</servlet-name>
 		<url-pattern>/ELBasics</url-pattern>
 	</servlet-mapping>	
+
+
+	<error-page>
+		<exception-type>java.lang.ArithmeticException</exception-type>
+		<location>/WEB-INF/error/arithmeticError.jsp</location>
+	</error-page>
+<!-- 	
+	<error-page>
+		<exception-type>java.lang.Throwable</exception-type>
+		<location>/WEB-INF/error/errorPage.jsp</location>
+	</error-page>
+ -->	
+
+ 	
+	<error-page>
+		<error-code>404</error-code>
+<!-- 		<location>/error/notFound.html</location>  -->
+		<location>/WEB-INF/error/notFond.html</location>
+	</error-page>
+
 	
 
 </web-app>
