@@ -109,7 +109,10 @@
 <!-- 		<location>/error/notFound.html</location>  -->
 		<location>/WEB-INF/error/notFond.html</location>
 	</error-page>
-
-	
-
+<!--  taglib definition not consistent with specification version
+	<taglib>
+		<taglib-uri>RandomIntegerGenerator</taglib-uri>
+		<taglib-location>/WEB-INF/el-functions.tld</taglib-location>
+	</taglib>
+ -->
 </web-app>

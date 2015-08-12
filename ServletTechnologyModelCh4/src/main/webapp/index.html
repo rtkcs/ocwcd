@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Servlet Technology Model</title>
+</head>
+<body>
+<h1>Servlet Technology Model</h1>
+
+<ul>
+	<li><a href="download.jsp">Download File</a></li>
+	<li><a href="lifecycle.jsp">Lifecycle</a></li>
+	<li><a href="lifecycle">Lifecycle Servlet</a></li>
+	<li><a href="life/cycle.do">Lifecycle Servlet 2 - with another url mapping</a></li>
+	<li><a href="lifecycleSpring">Lifecycle Spring Servlet</a></li>
+</ul>
+
+<h2>Servlet Mapping with UrlServelt</h2>
+
+<ul>
+	<li>The container looks for matches in this order:</li>
+	<ol>
+		<li>exatch match</li>
+		<li>directory match</li>
+		<li>extension match</li>
+	</ol>
+	<li>If the container matches more then one &lt;url-pattern&gt; it chooses the longest mapping.</li>	
+	<li><a href="directory/urlServlet.do"> Exact Mapping: /directory/urlServlet.do</a></li>
+	<li><a href="directory2/nonexistent.path">Directory Match: /directory2/*</a></li>
+	<li><a href="directory3/makeSomething.serve">Extension Match: *.serve</a></li>
+</ul>
+
+
+<h2>Sending Error from Servlets</h2>
+
+<ul>
+	<li><a href="error/?error=403">Forbidden 403</a></li>
+	<li><a href="error/?error=404">Not Found 404</a></li>
+	<li><a href="error/?error=406">Not Acceptable 406</a></li>
+	<li><a href="error/?error=anotherType">Internal Server Error 500</a></li>
+	<li><a href="error/">No Error 200</a></li>
+</ul>
+
+
+</body>
+</html>

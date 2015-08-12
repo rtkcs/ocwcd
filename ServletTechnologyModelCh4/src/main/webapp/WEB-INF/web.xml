@@ -6,6 +6,10 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" 
 	version="2.5">
   
+  <welcome-file-list>
+  	<welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>/WEB-INF/spring/root-context.xml</param-value>
@@ -45,5 +49,89 @@
     <servlet-name>lifecycleServlet</servlet-name>
     <url-pattern>/lifecycle</url-pattern>
   </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>lifecycleServlet2</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.LifecycleServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>lifecycleServlet2</servlet-name>
+    <url-pattern>/life/cycle.do</url-pattern>
+  </servlet-mapping>
+
+
+  <!-- Exact Match -->
+  <servlet>
+    <servlet-name>urlServlet1</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.UrlServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>urlServlet1</servlet-name>
+    <url-pattern>/directory/urlServlet.do</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Url Match -->
+  <servlet>
+    <servlet-name>urlServlet2</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.UrlServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>urlServlet2</servlet-name>
+    <url-pattern>/directory2/*</url-pattern>
+  </servlet-mapping>  
+
+
+  <!-- Url Match -->
+  <servlet>
+    <servlet-name>urlServlet3</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.UrlServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>urlServlet3</servlet-name>
+    <url-pattern>*.serve</url-pattern>
+  </servlet-mapping>  
+
+
+
+  <!-- Sending Errors from Servlet -->
+  <servlet>
+    <servlet-name>errorServlet</servlet-name>
+    <servlet-class>eu.rtakacs.servlet.ErrorServlet</servlet-class>
+    <init-param>
+      <param-name></param-name>
+      <param-value></param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>errorServlet</servlet-name>
+    <url-pattern>/error/*</url-pattern>
+  </servlet-mapping>  
   
 </web-app>
