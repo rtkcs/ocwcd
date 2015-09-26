@@ -26,6 +26,8 @@
 	 		<form-error-page>/errorPage.html</form-error-page>
 	 	</form-login-config>
 	 </login-config>
+	
+	
 
 	<!-- The definition of the Root Spring Container shared by all Servlets and Filters -->
 	<context-param>
@@ -77,9 +79,15 @@
 			<url-pattern>/securityServlet</url-pattern>
 			<http-method>GET</http-method>
 		</web-resource-collection>
+		
 		<auth-constraint>
 			<role-name>manager</role-name>
 		</auth-constraint>
+		
+		<user-data-constraint>
+			<transport-guarantee>CONFIDENTIAL</transport-guarantee>
+		</user-data-constraint>
+		
 	</security-constraint>
 
 </web-app>
